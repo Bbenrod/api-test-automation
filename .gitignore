@@ -1,24 +1,26 @@
 # Python
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
 *.pyd
 
-# Entornos virtuales
+# Virtual environments
 venv/
 .env/
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Pytest
 .pytest_cache/
 
-# Logs / evidencia generada
+# Coverage (por si luego agregas)
+.coverage
+htmlcov/
+
+# Logs
 *.log
-evidence/*.txt
 
-# Sistema
-.DS_Store
-Thumbs.db
-
-# IDEs
-.vscode/
-.idea/
+# Evidence (opcional según estrategia)
+evidence/history/
