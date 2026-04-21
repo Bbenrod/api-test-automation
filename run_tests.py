@@ -76,7 +76,8 @@ def run():
             affected_requirements.update(reqs)
 
     defect_count = len(defects)
-    density = defect_count / TOTAL_REQUIREMENTS if TOTAL_REQUIREMENTS else 0
+    req_with_defects_count = len(affected_requirements)
+    density = defect_count / req_with_defects_count if req_with_defects_count else 0
 
     # Construir salida
     output = []
@@ -93,10 +94,7 @@ def run():
     for req in sorted(affected_requirements):
         output.append(f"- {req}")
 
-    output.append(
-        f"\nDensidad: {defect_count} defectos / {TOTAL_REQUIREMENTS} requisitos = "
-        f"{density:.2f} defectos por requisito"
-    )
+    
 
     final_output = "\n".join(output)
 
@@ -157,6 +155,7 @@ def run():
 
     timestamp = datetime.now().strftime("%Y-%m-%d_%H%M")
 
+    os.makedirs("evidence/history", exist_ok=True)
     with open(f"evidence/history/run_{timestamp}.txt", "w") as f:
         f.write(final_output + "\n\n" + execution_output)
 
