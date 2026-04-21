@@ -1,0 +1,15 @@
+ID | Descripción | Status Esperado | Status Obtenido | Resultado | Defecto
+--------------------------------------------------------------------------
+test_tc_01_get_posts | GET /posts | 200 | 200 | PASS | 
+test_tc_02_get_post_by_id | GET /posts/1 | 200 | 200 | PASS | 
+test_tc_03_get_post_comments | GET /posts/1/comments | 200 | 200 | PASS | 
+test_tc_04_create_post | POST /posts | 201 | 201 | PASS | 
+test_tc_05_put_post | PUT /posts/1 | 200 | 200 | PASS | 
+test_tc_06_patch_post | PATCH /posts/1 | 200 | 200 | PASS | 
+test_tc_07_delete_post | DELETE /posts/1 | 200/204 | 200 | PASS | 
+test_tc_08_get_comments_by_post | GET /comments?postId=1 | 200 | 200 | PASS | 
+test_tc_09_get_post_invalid | GET /posts/99999 | 404 | 404 | PASS | 
+test_tc_10_post_invalid | POST /posts (invalid) | 400 | 201 | FAIL | D-01
+test_tc_11_put_invalid | PUT /posts/99999 | 404 | 500 | FAIL | D-02
+test_tc_12_patch_invalid | PATCH /posts/99999 | 404 | 200 | FAIL | D-03
+test_tc_13_delete_invalid | DELETE /posts/99999 | 404 | 200 | FAIL | D-04

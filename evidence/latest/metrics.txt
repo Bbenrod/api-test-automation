@@ -1,0 +1,16 @@
+--- MÉTRICAS DE PRUEBAS ---
+
+Fecha de ejecución: 2026-04-21 12:30:29.807688
+
+Total casos ejecutados: 13
+Casos pasados: 9 (69%)
+Casos fallidos: 4 (31%)
+Defectos encontrados: 4
+Cobertura: 13 / 13 casos
+
+Requisitos con defectos:
+- RF-4
+- RF-5
+- RF-6
+
+Densidad: 4 defectos / 6 requisitos = 0.67 defectos por requisito
